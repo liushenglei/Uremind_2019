@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="esignDemo.css">
+	<title>签名</title>.
+	<style>
+        body {
+            background-image: url(png/jiemu.png);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat
+        }
+    </style>
+</head>
+
+<body>
+
+	<div class="canvasDiv">
+        <div id="editing_area">
+            <canvas width="1080px" height="1500px" id="canvasEdit"></canvas>
+        </div>
+    </div>
+	
+    <div class="imgDiv">
+        <span id="sign_show"></span>
+	</div>
+	
+    <a id="sign_clear"><img src="png/shanchu.png" onclick="clean();"
+		style="display:block;position:absolute;top:1637px;left:88px"></a>
+
+    <button onclick="window.location.href='tianjiachengonf.html'" style="display:block;width:388px;height:192px;background:url() no-repeat;border:0;position:absolute;top:1637px;left:605px" >
+    
+    </button>   
+    
+    <button onclick="window.location.href='guanhuo.html'" style="display:block;width:169px;height:169px;background:url() no-repeat;border:0;position:absolute;top:234px;left:352px" >
+    </button>   
+    
+     <button onclick="window.location.href='qichuang.html'" style="display:block;width:169px;height:169px;background:url() no-repeat;border:0;position:absolute;top:234px;left:584px" >
+    </button> 
+    
+    <button onclick="window.location.href='jiemu.html'" style="display:block;width:169px;height:169px;background:url() no-repeat;border:0;position:absolute;top:234px;left:816px" >
+    </button> 
+    
+    
+    <button onclick="window.location.href='chiyao.html'" style="display:block;width:169px;height:169px;background:url() no-repeat;border:0;position:absolute;top:234px;left:120px" ></button>
+   
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/esign.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			//初始化动作，根据DOM的ID不同进行自定义，如果不写则内部默认取这四个
+			$().esign("canvasEdit", "sign_show", "sign_clear", "sign_ok");
+		});
+    </script>
+        <script type="text/javascript">
+            function clean(){
+                window.location.href = 'p2.html'
+            }
+          </script>
+      </body>
+      </html>
